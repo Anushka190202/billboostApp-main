@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.billboostapp.Fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/addCompany"
+        android:name="com.example.billboostapp.Fragments.AddCompany"
+        android:label="activity_add_company"
+        tools:layout="@layout/activity_add_company" />
+    <fragment
+        android:id="@+id/clientFragment"
+        android:name="com.example.billboostapp.Fragments.ClientFragment"
+        android:label="fragment_client"
+        tools:layout="@layout/fragment_client" />
+    <fragment
+        android:id="@+id/addClient"
+        android:name="com.example.billboostapp.Fragments.AddClient"
+        android:label="activity_add_client"
+        tools:layout="@layout/activity_add_client" />
+    <fragment
+        android:id="@+id/companyFragment"
+        android:name="com.example.billboostapp.Fragments.CompanyFragment"
+        android:label="fragment_company"
+        tools:layout="@layout/fragment_company" />
+    <fragment
+        android:id="@+id/updateClientFragment"
+        android:name="com.example.billboostapp.Fragments.UpdateClientFragment"
+        android:label="fragment_update_client"
+        tools:layout="@layout/fragment_update_client" />
+    <fragment
+        android:id="@+id/updateCompanyFragment"
+        android:name="com.example.billboostapp.Fragments.UpdateCompanyFragment"
+        android:label="fragment_update_company"
+        tools:layout="@layout/fragment_update_company" />
+
+</navigation>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash"
+    tools:context=".Fragments.AddCompany">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/_22sdp"
+        android:layout_marginVertical="@dimen/_58sdp"
+        app:cardCornerRadius="@dimen/_39sdp"
+        android:elevation="@dimen/_11sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+            <TextView
+                android:id="@+id/tvAddCompany"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Company"
+                android:textSize="@dimen/_26sdp"
+                android:textColor="#091E40"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/etCompany"/>
+            <EditText
+                android:id="@+id/etCompany"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_border"
+                android:padding="@dimen/_10sdp"
+                android:layout_margin="@dimen/_9sdp"
+                android:elevation="@dimen/_9sdp"
+                android:textColor="@color/black"
+                android:hint="Company name"
+                android:textColorHint="#BE0D3867"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvAddCompany"
+                app:layout_constraintBottom_toBottomOf="@id/etCompanyContact"
+                />
+            <EditText
+                android:id="@+id/etCompanyContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_border"
+                android:padding="@dimen/_10sdp"
+                android:textColorHint="#BE0D3867"
+                android:hint="Company contact"
+                android:elevation="@dimen/_9sdp"
+                android:layout_margin="@dimen/_9sdp"
+                android:textColor="@color/black"
+                android:inputType="phone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/etCompany"
+                app:layout_constraintBottom_toBottomOf="@id/etCompanyEmail"
+                />
+            <EditText
+                android:id="@+id/etCompanyEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_border"
+                android:padding="@dimen/_10sdp"
+                android:hint="Company Email"
+                android:layout_margin="@dimen/_9sdp"
+                android:textColor="@color/black"
+                android:elevation="@dimen/_9sdp"
+                android:inputType="textEmailAddress"
+                android:textColorHint="#BE0D3867"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/etCompanyContact"
+                app:layout_constraintBottom_toBottomOf="@id/etCompanyAddress"
+                />
+            <EditText
+                android:id="@+id/etCompanyAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_border"
+                android:padding="@dimen/_10sdp"
+                android:hint="Company Address"
+                android:textColorHint="#BE0D3867"
+                android:textColor="@color/black"
+                android:layout_margin="@dimen/_9sdp"
+                android:inputType="text"
+                android:elevation="@dimen/_9sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/etCompanyEmail"
+                app:layout_constraintBottom_toBottomOf="@id/btnAdd"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnAdd"
+                android:text="ADD"
+                android:textColor="@color/white"
+                android:backgroundTint="#D0073368"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/etCompanyAddress"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

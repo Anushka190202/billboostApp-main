@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="billModel"
+            type="com.example.billboostapp.Items" />
+        <variable
+            name="position"
+            type="Integer" />
+        <variable
+            name="clickListener"
+            type="com.example.billboostapp.ClickInterface" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/llItemList"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideVertical10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.10" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:background="@color/colorGrey_300"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:background="@color/colorGrey_300"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="0dp"
+            android:background="@color/colorGrey_300"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="0dp"
+            android:background="@color/colorGrey_300"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="0dp"
+            android:background="@color/colorGrey_300"
+            app:layout_constraintStart_toStartOf="@+id/guideVertical10"
+            app:layout_constraintEnd_toEndOf="@+id/guideVertical10"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="0dp"
+            android:background="@color/colorGrey_300"
+            app:layout_constraintStart_toStartOf="@+id/guideVertical70"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <EditText
+            android:id="@+id/tvQty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/quantity"
+            android:text="@{billModel.quantity.toString()}"
+            android:inputType="number"
+            android:padding="@dimen/margin_4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideVertical10"/>
+
+<!--        android:text="@{billModel.quantity.toString()}"-->
+
+        <EditText
+            android:id="@+id/tvDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/description"
+            android:layout_weight="2"
+            android:text="@{billModel.description}"
+            android:inputType="textPersonName|textCapSentences"
+            android:padding="@dimen/margin_4dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideVertical70"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideVertical10"/>
+
+<!--        android:text="@{billModel.description}"-->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideVertical70"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".70" />
+        <EditText
+            android:id="@+id/tvItemPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/item_price"
+            android:layout_weight="0.5"
+            android:text="@{billModel.price_per_item.toString()}"
+            android:inputType="numberDecimal"
+            android:padding="@dimen/margin_4dp"
+            app:layout_constraintEnd_toStartOf="@+id/ivclose"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideVertical70"/>
+
+<!--        android:text="@{billModel.price_per_item.toString()}"-->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideVertical99"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.99" />
+
+        <ImageView
+            android:id="@+id/ivclose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintDimensionRatio="1:1"
+            android:src="@drawable/ic_close"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideVertical99"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
+
