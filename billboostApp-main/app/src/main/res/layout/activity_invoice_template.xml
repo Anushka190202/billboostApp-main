@@ -122,6 +122,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="@id/lyClient"
+        app:layout_constraintEnd_toEndOf="@id/lyIssueDate"
         app:layout_constraintTop_toBottomOf="@id/lyClient">
 
         <TextView
@@ -147,8 +148,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintEnd_toStartOf="@id/lyDueDate"
-        app:layout_constraintStart_toEndOf="@id/lyInvoiceNo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/lyInvoiceNo"
         app:layout_constraintTop_toBottomOf="@id/lyClient">
 
         <TextView
@@ -168,31 +169,7 @@
             android:padding="@dimen/_3sdp" />
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/lyDueDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="@id/lyClient"
-        app:layout_constraintTop_toBottomOf="@id/lyClient">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_5sdp"
-            android:text="Due Date"
-            android:textColor="#3F51B5"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/tvDueDate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/_5sdp"
-            android:background="@drawable/et_border"
-            android:padding="@dimen/_3sdp" />
-
-    </LinearLayout>
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -209,14 +186,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             >
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_5sdp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
 
-                android:text="S.no."/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -342,7 +312,30 @@
 
 
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:layout_weight="2"
+                    android:text=""
+                    android:textAlignment="textEnd" />
+
+                <TextView
+                    android:id="@+id/tvAmountPaid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/etborder2"
+                    android:textAlignment="center" />
+
+
+            </LinearLayout>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

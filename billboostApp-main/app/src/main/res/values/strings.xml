@@ -21,14 +21,14 @@
     <string name="total_amount_is_less_than_amount_paid">Total Amount is Less then amount Paid</string>
     <string name="alert">Alert</string>
     <string name="sorry_cannot_add">Sorry Cannot Add</string>
-    <string name="ok">Ok</string>
+    <string name="ok">OK</string>
     <string name="invoice_number">Invoice Number</string>
     <string name="bill_updated_successfully">Bill Update SuccessFully</string>
     <string name="back">Back</string>
     <string name="bill_added_successfully">Bill Added Successfully</string>
     <string name="yes">Yes</string>
     <string name="delete_alert">Delete Alert</string>
-    <string name="delete_message">Deleted</string>
+    <string name="delete">Delete</string>
     <string name="no">No</string>
     <string name="update">Update</string>
 </resources>

@@ -128,7 +128,7 @@
                         android:id="@+id/etLblPickUpDate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/bill_date"
+                        android:text="Bill Date"
                         android:paddingTop="@dimen/margin_5dp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/tvClientPhoneNumber" />
@@ -147,6 +147,7 @@
                         />
 
                 </TableRow>
+
             </TableLayout>
 
 

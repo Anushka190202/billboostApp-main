@@ -9,6 +9,7 @@ import com.example.billboostapp.EditClickInterface
 import com.example.billboostapp.databinding.LayoutBillsBinding
 
 
+
 class BillAdapter(var arrayList: ArrayList<BillModel>, var clickListener: EditClickInterface)  : RecyclerView.Adapter<BillAdapter.ViewHolder>(){
     class ViewHolder(var binding: LayoutBillsBinding): RecyclerView.ViewHolder(binding.root) {
         fun bindData(userModel: BillModel, position: Int, clickListener: EditClickInterface){
@@ -18,6 +19,9 @@ class BillAdapter(var arrayList: ArrayList<BillModel>, var clickListener: EditCl
 
             binding.ivEdit.setOnClickListener {
                 clickListener.onClick(position)
+            }
+            binding.ivView.setOnClickListener{
+                clickListener.onViewClick(position)
             }
         }
     }

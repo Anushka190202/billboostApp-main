@@ -7,9 +7,11 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.billboostapp.Activities.AddInvoice
+import com.example.billboostapp.Activities.InvoiceTemplate
 import com.example.billboostapp.Adapters.InvoiceAdapter
 import com.example.billboostapp.AddBillActivity
 import com.example.billboostapp.BillModel
@@ -61,6 +63,7 @@ class HomeFragment : Fragment(), EventListener<QuerySnapshot> {
 //        binding.rvInvoice.adapter=adapter
 
           db.collection(collectionName).get().addOnSuccessListener {
+              binding.loader.hide()
               for(snapshot in it.documentChanges){
                   var userModel = BillModel()
                   userModel = snapshot.document.toObject(BillModel::class.java)
@@ -71,6 +74,8 @@ class HomeFragment : Fragment(), EventListener<QuerySnapshot> {
 
 
               }
+          }.addOnFailureListener {
+              Toast.makeText(requireContext(), it.message.toString(), Toast.LENGTH_SHORT).show()
           }
 //        query = dbCollection.orderBy("timeStamp" )
 //        query = dbCollection.orderBy("timeStamp")
@@ -92,7 +97,16 @@ class HomeFragment : Fragment(), EventListener<QuerySnapshot> {
                 startActivity(intent)
             }
 
+            override fun onViewClick(position: Int) {
+                var intent= Intent(this@HomeFragment.requireContext(),InvoiceTemplate::class.java)
+                var bundle = Bundle()
+                bundle.putString("billModel",convertJsonToString(billModel[position]))
+                intent.putExtras(bundle)
+                startActivity(intent)
+            }
+
         })
+
         binding.rvInvoice.layoutManager = LinearLayoutManager(requireContext())
         binding.rvInvoice.adapter = adapter
         return binding.root

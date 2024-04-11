@@ -6,10 +6,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.billboostapp.R
-class InvoiceAdapter (var namesList:List<String>): RecyclerView.Adapter<InvoiceAdapter.ViewHolder>() {
+class InvoiceAdapter (var ItemList:List<String>): RecyclerView.Adapter<InvoiceAdapter.ViewHolder>() {
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        var tvInvoiceNo= view.findViewById<TextView>(R.id.tvName)
-        var tvName= view.findViewById<TextView>(R.id.tvName)
+        var tvItemName= view.findViewById<TextView>(R.id.tvItemName)
+        var tvprice= view.findViewById<TextView>(R.id.tvPrice)
+        var tvquantity= view.findViewById<TextView>(R.id.tvQuantity)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -17,12 +18,13 @@ class InvoiceAdapter (var namesList:List<String>): RecyclerView.Adapter<InvoiceA
         return InvoiceAdapter.ViewHolder(itemView)
     }
     override fun getItemCount(): Int {
-        return namesList.size
+        return ItemList.size
     }
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = namesList[position]
-        holder.tvName.setText(item)
-        holder.tvInvoiceNo.setText(item)
+        val item = ItemList[position]
+        holder.tvItemName.setText(item)
+        holder.tvprice.setText(item)
+        holder.tvquantity.setText(item)
 
     }
 }
