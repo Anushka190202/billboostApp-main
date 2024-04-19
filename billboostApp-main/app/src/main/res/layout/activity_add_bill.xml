@@ -31,6 +31,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ADD INVOICE"
+                android:id="@+id/tvAddInvoice"
+                android:layout_gravity="center"
+                android:textSize="@dimen/_19sdp"
+                android:layout_margin="@dimen/_12sdp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UPDATE INVOICE"
+                android:id="@+id/tvUpdateInvoice"
+                android:visibility="gone"
                 android:layout_gravity="center"
                 android:textSize="@dimen/_19sdp"
                 android:layout_margin="@dimen/_12sdp" />

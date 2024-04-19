@@ -410,10 +410,13 @@ class AddBillActivity : AppCompatActivity() {
         }
 
         private fun updateLayout() {
+            binding.tvUpdateInvoice.visibility=View.VISIBLE
+            binding.tvAddInvoice.visibility=View.GONE
             binding.etPickUpDate.setText(billModel.date)
             binding.btnAddOrder.setText("Update Order")
             // billModel.invoiceNumber?.let { binding.etInvoiceNo.setSelection(it) }
             binding.tvItemSubTotal.setText(billModel.subTotal.toString())
+            binding.etInvoiceNo.setText(billModel.invoiceNumber.toString())
             binding.tvGst.setText(billModel.gst.toString())
             binding.tvTotal.setText(billModel.total.toString())
             binding.tvAmountPaid.setText(billModel.ammountPaid.toString())
