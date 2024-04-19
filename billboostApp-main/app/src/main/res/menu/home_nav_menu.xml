@@ -13,12 +13,12 @@
         android:icon="@drawable/baseline_add_business_24"
         android:title="Company" />
 
-    <item
-        android:title="settings"
-        android:icon="@drawable/baseline_settings_24"
-        android:id="@+id/m_settings"/>
+
     <item
         android:title="Logout"
         android:icon="@drawable/baseline_logout_24"
         android:id="@+id/m_logout"/>
-</menu>
+    <item
+        android:title="About"
+        android:icon="@drawable/baseline_settings_24"
+        android:id="@+id/m_about"/></menu>

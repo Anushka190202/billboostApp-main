@@ -40,5 +40,10 @@
         android:name="com.example.billboostapp.Fragments.UpdateCompanyFragment"
         android:label="fragment_update_company"
         tools:layout="@layout/fragment_update_company" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.billboostapp.Fragments.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
 
 </navigation>

@@ -84,7 +84,13 @@
                android:layout_height="wrap_content"
                android:src="@drawable/baseline_preview_24"
                />
-
+           <ImageView
+               android:id="@+id/ivDelete"
+               android:layout_width="wrap_content"
+               android:padding="@dimen/margin_5dp"
+               android:layout_height="wrap_content"
+               android:src="@drawable/baseline_delete_24"
+               />
        </LinearLayout>
 
     </LinearLayout>

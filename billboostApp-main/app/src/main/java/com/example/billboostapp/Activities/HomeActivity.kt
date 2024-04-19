@@ -52,6 +52,10 @@ class HomeActivity : AppCompatActivity() {
 
                     navController.navigate(R.id.companyFragment)
                 }
+                R.id.m_about->{
+
+                    navController.navigate(R.id.aboutFragment)
+                }
                 R.id.m_logout->{
                     var builder = AlertDialog.Builder(this)
                     builder.setTitle("Logout")

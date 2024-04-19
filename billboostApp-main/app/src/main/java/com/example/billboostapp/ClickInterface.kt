@@ -1,6 +1,7 @@
 package com.example.billboostapp
 
 import android.view.View
+import com.example.billboostapp.DataModels.Company
 
 interface ClickInterface {
     fun onClick(position: Int, clickType: ClickType ?= ClickType.EDIT): Boolean
@@ -12,6 +13,7 @@ interface ClickInterface {
 interface EditClickInterface {
     fun onClick(position: Int)
     fun onViewClick(position: Int)
+    fun onDelete(position: Int,billModel: BillModel)
 }
 
 enum class ClickType{

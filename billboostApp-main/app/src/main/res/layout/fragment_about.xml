@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_25sdp"
+    android:background="@drawable/etborder2"
+    tools:context=".Fragments.AboutFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ABOUT"
+        android:textStyle="bold"
+        android:textColor="#0C2247"
+        android:textAlignment="center"
+        android:textSize="@dimen/_25sdp"
+        android:padding="@dimen/_22sdp"
+        android:layout_gravity="center_horizontal"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"
+        android:layout_gravity="center_horizontal"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BILLBOOST"
+        android:textStyle="bold"
+        android:textColor="#0C2247"
+        android:textAlignment="center"
+        android:textSize="@dimen/_20sdp"
+        android:layout_gravity="center_horizontal"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A Powerful Tool for Efficient Invoicing"
+        android:textStyle="italic"
+        android:textColor="#0C2247"
+        android:textAlignment="center"
+        android:textSize="@dimen/_18sdp"
+        android:layout_gravity="center_horizontal"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BillBoost is an invoice management app
+designed to streamline the invoicing process for businesses of all sizes. With
+BillBoost, you can create, send, and track
+invoices effortlessly, helping you stay organized
+and get paid faster. The app likely offers
+features  to help you manage your finances more
+efficiently.Overall, BillBoost aims to simplify
+the invoicing process and help businesses better
+manage their cash flow."
+        android:textColor="@color/black"
+        android:padding="@dimen/_10sdp"
+        android:textAlignment="center"
+        android:textSize="@dimen/_15sdp"
+        android:layout_gravity="center_horizontal"
+        />
+
+</LinearLayout>
+
+

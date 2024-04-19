@@ -23,6 +23,9 @@ class BillAdapter(var arrayList: ArrayList<BillModel>, var clickListener: EditCl
             binding.ivView.setOnClickListener{
                 clickListener.onViewClick(position)
             }
+            binding.ivDelete.setOnClickListener{
+                clickListener.onDelete(position, BillModel())
+            }
         }
     }
 
@@ -33,7 +36,6 @@ class BillAdapter(var arrayList: ArrayList<BillModel>, var clickListener: EditCl
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bindData(arrayList[position], position, clickListener)
-
 
     }
 

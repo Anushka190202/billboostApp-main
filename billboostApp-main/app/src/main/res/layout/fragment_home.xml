@@ -32,7 +32,7 @@
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/ic_launcher_background"
+            android:background="@color/ic_launcher_background"
             android:src="@drawable/baseline_add_24"
             android:contentDescription="Add Invoice"
             android:id="@+id/fbAdd"

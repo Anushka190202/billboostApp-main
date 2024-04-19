@@ -58,9 +58,6 @@ class HomeFragment : Fragment(), EventListener<QuerySnapshot> {
     ): View? {
         binding=FragmentHomeBinding.inflate(layoutInflater)
         binding.rvInvoice.layoutManager=LinearLayoutManager(requireContext())
-//        var names= listOf<String>("Name 1","Name 2","Name 3")
-//        var adapter = InvoiceAdapter(names)
-//        binding.rvInvoice.adapter=adapter
 
           db.collection(collectionName).get().addOnSuccessListener {
               binding.loader.hide()
@@ -102,6 +99,12 @@ class HomeFragment : Fragment(), EventListener<QuerySnapshot> {
                 startActivity(intent)
             }
 
+            override fun onDelete(position: Int,billmodel:BillModel) {
+                db.collection("bills").document(billmodel.id.toString())
+                    .delete()
+                    .addOnSuccessListener {Toast.makeText(requireContext(),"invoice deleted!!" ,Toast.LENGTH_SHORT).show() }
+                    .addOnFailureListener { Toast.makeText(requireContext(),"invoice not deleted!!" ,Toast.LENGTH_SHORT).show()  }
+            }
         })
 
         binding.rvInvoice.layoutManager = LinearLayoutManager(requireContext())
