@@ -8,6 +8,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/llItemList"
         android:orientation="horizontal"
+        android:layout_marginHorizontal="@dimen/_6sdp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -73,6 +74,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/quantity"
             android:text="Qty"
+            android:textAlignment="center"
             android:inputType="number"
             android:padding="@dimen/margin_4dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -108,9 +110,10 @@
             android:hint="@string/item_price"
             android:layout_weight="0.5"
             android:text="10"
+            android:textAlignment="center"
             android:inputType="numberDecimal"
             android:padding="@dimen/margin_4dp"
-            app:layout_constraintEnd_toStartOf="@+id/ivclose"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toEndOf="@+id/guideVertical70"/>
 
@@ -122,15 +125,15 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.99" />
 
-        <ImageView
-            android:id="@+id/ivclose"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintDimensionRatio="1:1"
-            android:src="@drawable/ic_close"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/guideVertical99"/>
+<!--        <ImageView-->
+<!--            android:id="@+id/ivclose"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintDimensionRatio="1:1"-->
+<!--            android:src="@drawable/ic_close"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/guideVertical99"/>-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

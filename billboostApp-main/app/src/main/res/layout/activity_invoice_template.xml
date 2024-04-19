@@ -121,8 +121,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="@id/lyClient"
-        app:layout_constraintEnd_toEndOf="@id/lyIssueDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/lyIssueDate"
         app:layout_constraintTop_toBottomOf="@id/lyClient">
 
         <TextView
@@ -149,7 +149,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/lyInvoiceNo"
+        app:layout_constraintStart_toEndOf="@id/lyInvoiceNo"
         app:layout_constraintTop_toBottomOf="@id/lyClient">
 
         <TextView
@@ -170,58 +170,122 @@
     </LinearLayout>
 
 
-    <TableLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_20dp"
+        android:layout_marginStart="@dimen/margin_20dp"
+        android:layout_marginRight="@dimen/margin_20dp"
+        android:layout_marginEnd="@dimen/margin_20dp"
+        android:layout_marginTop="@dimen/margin_6dp"
         android:id="@+id/tvTableHeader"
+        android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@id/lyIssueDate"
-        android:layout_marginTop="@dimen/_10sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
 
-        <TableRow
-            android:id="@+id/tvItemList"
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="0dp"
+
+            app:layout_constraintEnd_toEndOf="@+id/guideVertical10"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@+id/guideVertical70"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvQty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Qty"
+            android:inputType="number"
+
+            android:padding="@dimen/margin_4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideVertical10"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideVertical70"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="260dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideVertical10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="333dp" />
+
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
-            >
+            android:text="Description"
+            android:layout_weight="2"
+            android:padding="@dimen/margin_4dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideVertical70"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideVertical10"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_5sdp"
-                android:text="Item Name"
-                android:textColor="@color/black"
-                android:textStyle="bold"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_5sdp"
-                android:text="Quantity"
-                android:textColor="@color/black"
-                android:textStyle="bold"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_5sdp"
-                android:text="Price/Item"
-                android:textColor="@color/black"
-                android:textStyle="bold"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_5sdp"
-                android:text="Total"
-                android:textColor="@color/black"
-                android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price"
+            android:inputType="number"
+            android:padding="@dimen/margin_4dp"
+            app:layout_constraintStart_toEndOf="@+id/guideVertical70"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </TableRow>
-    </TableLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvItems"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_4sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTableHeader" />
@@ -322,7 +386,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/_4sdp"
                     android:layout_weight="2"
-                    android:text=""
+                    android:text="Amount Paid"
                     android:textAlignment="textEnd" />
 
                 <TextView

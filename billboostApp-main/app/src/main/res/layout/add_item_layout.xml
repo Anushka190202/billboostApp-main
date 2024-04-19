@@ -16,6 +16,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:id="@+id/llItemList"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
@@ -82,6 +83,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="@string/quantity"
+            android:textAlignment="center"
             android:text="@{billModel.quantity.toString()}"
             android:inputType="number"
             android:padding="@dimen/margin_4dp"
@@ -114,6 +116,7 @@
         <EditText
             android:id="@+id/tvItemPrice"
             android:layout_width="0dp"
+            android:textAlignment="center"
             android:layout_height="wrap_content"
             android:hint="@string/item_price"
             android:layout_weight="0.5"
