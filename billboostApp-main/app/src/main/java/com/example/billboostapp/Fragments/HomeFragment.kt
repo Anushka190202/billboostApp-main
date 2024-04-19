@@ -75,13 +75,10 @@ class HomeFragment : Fragment(), EventListener<QuerySnapshot> {
 
               }
           }.addOnFailureListener {
+              println("ShowFailureData: ${it.message}")
               Toast.makeText(requireContext(), it.message.toString(), Toast.LENGTH_SHORT).show()
           }
-//        query = dbCollection.orderBy("timeStamp" )
-//        query = dbCollection.orderBy("timeStamp")
-//            .whereGreaterThanOrEqualTo("timeStamp", Timestamp(startDate.time))
-//            .whereLessThanOrEqualTo("timeStamp", Timestamp(endDate.time))
-//        listener = query.addSnapshotListener(this)
+
 
 
         binding.fbAdd.setOnClickListener{

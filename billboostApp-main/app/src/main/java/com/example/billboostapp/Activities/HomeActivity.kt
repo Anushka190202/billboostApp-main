@@ -59,7 +59,7 @@ class HomeActivity : AppCompatActivity() {
                     builder.setPositiveButton("Yes", DialogInterface.OnClickListener { dialogInterface, i ->
                         auth.signOut()
                         Toast.makeText(this, "logout successfully!!", Toast.LENGTH_SHORT).show()
-                        var intent= Intent(this,ActivityLoginBinding::class.java)
+                        var intent= Intent(this,login::class.java)
                         startActivity(intent)
                         this.finish()
                     })

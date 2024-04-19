@@ -50,7 +50,7 @@ class CompanyFragment : Fragment(), CompanyListInterface {
                     "${document.id} => ${document.data}",
                     Toast.LENGTH_SHORT
                 ).show()
-                Log.d("TAG", "${document.id} => ${document.data}")
+                System.out.println("BillList: ${document.id} => ${document.data}")
             }
             companyAdapter.notifyDataSetChanged()
             binding.rvCompany.adapter = companyAdapter
